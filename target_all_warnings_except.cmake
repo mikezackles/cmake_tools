@@ -13,7 +13,7 @@ function(TARGET_ALL_WARNINGS_EXCEPT target)
       ${PARSED_CLANG})
   elseif(is_gcc)
     target_compile_options("${target}" PRIVATE
-      -Wall -Wextra -Wpedantic
+      -Wconversion -Wall -Wextra -Wpedantic
       $<$<CONFIG:Debug>:-Werror>
       $<$<CONFIG:Debug>:-fmax-errors=3>
       ${PARSED_GCC})
